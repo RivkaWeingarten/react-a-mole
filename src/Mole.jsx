@@ -7,6 +7,8 @@ function Mole(props){
         // It is your game to tune!
         let randSeconds = Math.ceil(Math.random() * 5000)
         let timer = setTimeout(() => {
+           
+        //    this toggle made it work, i looked at solution the original code .setDisplayMole crashed
             props.toggle(false)
         }, randSeconds)
         return () => clearTimeout(timer)
